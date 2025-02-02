@@ -1,6 +1,7 @@
 "use strict";
-// import { ApolloServer } from "@apollo/server";
-// import { startStandaloneServer } from "@apollo/server/standalone";
+Object.defineProperty(exports, "__esModule", { value: true });
+const server_1 = require("@apollo/server");
+const standalone_1 = require("@apollo/server/standalone");
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
 // your data.
@@ -37,4 +38,18 @@ const resolvers = {
         books: () => books,
     },
 };
+// The ApolloServer constructor requires two parameters: your schema
+// definition and your set of resolvers.
+const server = new server_1.ApolloServer({
+    typeDefs,
+    resolvers,
+});
+// Passing an ApolloServer instance to the `startStandaloneServer` function:
+//  1. creates an Express app
+//  2. installs your ApolloServer instance as middleware
+//  3. prepares your app to handle incoming requests
+const { url } = await (0, standalone_1.startStandaloneServer)(server, {
+    listen: { port: 4000 },
+});
+console.log(`🚀  Server ready at: ${url}`);
 //# sourceMappingURL=index.js.map
