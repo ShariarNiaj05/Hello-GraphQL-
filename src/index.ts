@@ -13,9 +13,6 @@ price: Float
 quantity: Int
 onStock: Boolean
 categoryId: String
-
-
-    categoryId: "4f7f61e5-96c2-445d-80fb-79f58e3d061b",
   }
 
   type Query {
