@@ -4,7 +4,7 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 // that together define the "shape" of queries that are executed against
 // your data.
 const typeDefs = `#graphql
-  type Query {
+  type Product {
 id: ID!
 name: String
 image: String
@@ -12,10 +12,14 @@ description: String
 price: Float
 quantity: Int
 onStock: Boolean
-categoryId: ID!
+categoryId: String
 
 
     categoryId: "4f7f61e5-96c2-445d-80fb-79f58e3d061b",
+  }
+
+  type Query {
+  products: [Product]
   }
 
 `;
