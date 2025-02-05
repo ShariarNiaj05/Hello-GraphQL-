@@ -18,6 +18,7 @@ categoryId: String
 
   type Query {
   products: [Product]
+  product: product
   }
 
 `;
@@ -25,7 +26,10 @@ categoryId: String
 // Resolvers define how to fetch the types defined in your schema.
 // This resolver retrieves books from the "books" array above.
 const resolvers = {
-  Query: { products: () => db.products },
+  Query: {
+    products: () => db.products,
+    product: () => db.products,
+  },
 };
 
 const server = new ApolloServer({
