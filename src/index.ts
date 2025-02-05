@@ -18,7 +18,7 @@ categoryId: String
 
   type Query {
   products: [Product]
-  product(productId: ID!): product
+  product(productId: ID!): Product
   }
 
 `;
@@ -28,7 +28,7 @@ categoryId: String
 const resolvers = {
   Query: {
     products: () => db.products,
-    product: (parent, args, context) => {
+    product: (parent: any, args: { productId: string }, context: any) => {
       console.log({ parent }, { args }, { context });
     },
   },
