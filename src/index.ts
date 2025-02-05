@@ -30,6 +30,8 @@ const resolvers = {
     products: () => db.products,
     product: (parent: any, args: { productId: string }, context: any) => {
       console.log({ parent }, { args }, { context });
+      const result = db.products.find((pd) => pd.id === args.productId);
+      console.log({ result });
     },
   },
 };
