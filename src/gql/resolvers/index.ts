@@ -11,7 +11,7 @@ export const resolvers = {
       return result;
     },
     categories: () => db.categories,
-    category: (parent: any, args: any, context: any) => {
+    category: (parent: any, args: { categoryId: string }, context: any) => {
       const result = db.categories.find(
         (category) => category.id === args.categoryId
       );
