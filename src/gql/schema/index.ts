@@ -13,9 +13,17 @@ onStock: Boolean
 categoryId: String
   }
 
+
+  type Category {
+  
+  }
+
+
   type Query {
   products: [Product]
   product(productId: ID!): Product
+  category: [Category]
+  category(categoryId: ID!): Category
   }
 
 `;
