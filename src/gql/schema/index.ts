@@ -10,8 +10,8 @@ description: String
 price: Float
 quantity: Int
 onStock: Boolean
-categoryId: String
-  }
+
+}
 
 
   type Category {
