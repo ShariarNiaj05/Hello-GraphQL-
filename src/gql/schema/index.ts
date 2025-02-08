@@ -20,6 +20,14 @@ category: Category
   products: [Product]
   }
 
+  type Review {
+   id: String,
+    review: String,
+    rating: Float,
+    date: String,
+    productId: String,
+  
+  }
 
   type Query {
   products: [Product]
