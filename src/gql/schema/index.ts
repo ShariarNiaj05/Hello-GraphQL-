@@ -11,6 +11,7 @@ price: Float
 quantity: Int
 onStock: Boolean
 category: Category
+reviews: [Review]
 }
 
 
