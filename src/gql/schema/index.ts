@@ -17,7 +17,7 @@ category: Category
   type Category {
   id: ID!
   name: String
-  product: [Product]
+  products: [Product]
   }
 
 
