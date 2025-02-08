@@ -18,4 +18,7 @@ export const resolvers = {
       return result;
     },
   },
+  Product: {
+    category: (parent: any, args: any, context: any) => {},
+  },
 };
