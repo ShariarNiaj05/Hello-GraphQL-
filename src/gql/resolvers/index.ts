@@ -25,6 +25,7 @@ export const resolvers = {
       );
       return result;
     },
+    reviews: (parent: any, args: any, context: any) => {},
   },
   Category: {
     products: (parent: any, args: any, context: any) => {
