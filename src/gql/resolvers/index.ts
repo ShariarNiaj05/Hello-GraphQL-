@@ -28,7 +28,9 @@ export const resolvers = {
   },
   Category: {
     products: (parent: any, args: any, context: any) => {
-      const result = db.products.filter((product) => product.id === parent.id);
+      const result = db.products.filter(
+        (product) => product.categoryId === parent.id
+      );
       return result;
     },
   },
